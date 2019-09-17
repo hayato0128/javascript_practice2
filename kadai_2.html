@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "ja">
+
+<head>
+    <meta charset = "utf-8">
+    <title>簡易ToDoリスト</title>
+    <link rel = "stylesheet" type = "text/css" href = "kadai_2.css">
+    <script type = "text/javascript" src = "kadai_2.js"></script>
+</head>
+
+<body>
+    <div class = "title">
+        <h1>ToDoリスト</h1>
+    </div>
+
+    <form id = "form1">
+        <input type = "radio" name = "status" value = "all"><label>すべて</label>
+        <input type = "radio" name = "status" value = "working"><label>作業中</label>
+        <input type = "radio" name = "status" value = "complete"><label>完了</label>
+    </form>
+    
+    <table id = "table">
+        <tr>
+            <th>ID</th>
+            <th>コメント</th>
+            <th>状態</th>
+        </tr>
+    </table>
+    
+    <div class = "texttitle">
+        <p>新規タスクの追加</p>
+    </div>
+
+        <input type = "text" id = "commentform">
+        <button id = "addbtn" type = "button">追加</button>
+
+</body>
+
+</html>
