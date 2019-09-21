@@ -1,25 +1,41 @@
 window.onload = function() {
-
+// addbtnのID取得
 const addbtn = document.getElementById("addbtn");
+// addbtnの動作設定
+addbtn.addEventListener("click" , function(){
+// tbodyのID取得
+const tbody = document.getElementById("tbodyinsert");
+// trエレメント新規作成
+const tr = document.createElement("tr");
+// tdエレメント新規作成
+const td1 = document.createElement("td");
+const td2 = document.createElement("td");
+const td3 = document.createElement("td");
+const td4 = document.createElement("td");
 
-addbtn.addEventListener("click" , function (){
-const table = document.getElementById("table");
+// ID番号の設定
+const idnum = length++;
+td1.innerHTML = idnum;
+tbody.appendChild(td1);
 
-const line = table.insertRow(-1);
-const row1 = line.insertCell(0);
-const row2 = line.insertCell(1);
-const row3 = line.insertCell(2);
-const row4 = line.insertCell(3);
-
+// commentformのID取得
 const commentform = (document.getElementById("commentform").value);
+td2.innerHTML = commentform;
+tbody.appendChild(td2);
 
-const delbtn = '<input type = "button" value = "削除" onclick = table.deleteRow(-1) />';
-const allbtn = '<input type = "button" value = "すべて" />';
+// 状態ボタンの作成
+const allbtn = document.createElement("button");
+td3.innerHTML = allbtn;
+tbody.appendChild(allbtn);
 
-row1.innerHTML = (table.rows.length - 2);
-row2.innerHTML += commentform;
-row3.innerHTML += delbtn;
-row3.innerHTML = allbtn;
-row4.innerHTML = delbtn;
+// 削除ボタンの作成
+const delbtn = document.createElement("button");
+td4.innerHTML = delbtn;
+tbody.appendChild(delbtn);
+
+delbtn.addEventListener("click" , function(){
+tbody.removeChild(td);
+});
+tbody.appendChild(tr);
 });
 }

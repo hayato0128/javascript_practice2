@@ -13,18 +13,21 @@
         <h1>ToDoリスト</h1>
     </div>
 
-    <form id = "form1">
         <input type = "radio" name = "status" value = "all"><label>すべて</label>
         <input type = "radio" name = "status" value = "working"><label>作業中</label>
         <input type = "radio" name = "status" value = "complete"><label>完了</label>
-    </form>
     
     <table id = "table">
-        <tr>
-            <th>ID</th>
-            <th>コメント</th>
-            <th>状態</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>コメント</th>
+                <th>状態</th>
+            </tr>
+        </thead>
+
+        <tbody id = "tbodyinsert">
+        </tbody>
     </table>
     
     <div class = "texttitle">
